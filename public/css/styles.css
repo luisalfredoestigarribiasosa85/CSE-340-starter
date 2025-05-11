@@ -1,6 +1,205 @@
+/* Import Google font */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
 /******* Change Box Model ***************/
-*,
-*:before,
-*:after {
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+}
+.siteName a {
+  text-decoration: none;
+  color: #000;
+  font-size: 24px;
+  font-weight: 600;
+}
+.siteName a:hover {
+  color: #0572e6;
+  cursor: pointer;
+}
+#tools a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+  font-weight: 400;
+  margin: 10px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 400;
+}
+h1, h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  padding: 20px;
+}
+section.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 0 0 50px;
+}
+.hero .hero-text {
+  position: absolute;
+  background-color: rgba(255, 255, 255, .8);
+  color: #0572e6;
+  left: 20px;
+  width: 135px;
+}
+.hero .hero-text h2 {
+  font-size: 20px;
+}
+.hero .hero-text p {
+  font-size: 14px;
+}
+.hero .hero-text button {
+  background-color: #0572e6;
+  border: none;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  font-weight: 700;
+}
+.hero .hero-img {
+  position: relative;
+}
+.reviews {
+  display: block;
+}
+.delorean-review ul {
+  padding: 0 40px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.delorean-upgrades {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 0.5fr 1fr 1fr; 
+  gap: 8px 8px; 
+  grid-template-areas: 
+    "h2 h2"
+    "upgrade1 upgrade2"
+    "upgrade3 upgrade4"; 
+}
+.delorean-upgrades h2 {
+  justify-self: start; 
+  grid-area: h2; 
+  height: 30px; 
+}
+.delorean-upgrades .upgrade1 {
+  grid-area: upgrade1;
+}
+.delorean-upgrades .upgrade2 {
+  grid-area: upgrade2;
+}
+.delorean-upgrades .upgrade3 {
+  grid-area: upgrade3;
+}
+.delorean-upgrades .upgrade4 {
+  grid-area: upgrade4;
+}
+.delorean-upgrades figure .images {
+  background-color: #0572e6;
+  width: 100%;
+  height: 80%;
+  text-align: center;
+  align-content: center;
+}
+.delorean-upgrades figure {
+  margin: 0 10px;
+}
+footer {
+  margin: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  body {
+    background: url("/images/site/checkerboard.jpg");
+  }
+  #wrapper {
+    max-width: 80vw;
+    margin: 10vh auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 5px solid #0572e6;
+  }
+  header .siteName a {
+    font-size: 30px;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .hero .hero-text {
+    left: 15%;
+    width: 350px;
+    padding: 30px 0;
+    line-height: 1.5;
+  }
+  .hero .hero-text h2 {
+    font-size: 30px;
+  }
+  .hero .hero-text p {
+    font-size: 20px;
+  }
+  .hero .hero-text button {
+    font-size: 20px;
+    margin: 20px 0 0 0;
+  }
+  .reviews {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  .reviews .delorean-review {
+    width: 50%;
+    height: 100%;
+  }
+  .reviews .delorean-upgrades {
+    width: 50%;
+    height: 100%;
+  }
+  .reviews h2 {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .reviews .delorean-upgrades h2 {
+    margin: 20px 0 40px 0;
+  }
+  .reviews .delorean-review h2 {
+    margin: 0 0 20px 0;
+  }
+  .reviews ul {
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0 0 20px 0;
+  }
+  footer {
+    margin: 40px 0 0 0;
+  }
 }
