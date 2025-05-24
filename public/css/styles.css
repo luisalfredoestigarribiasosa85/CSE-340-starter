@@ -47,6 +47,16 @@ nav ul {
   font-size: 16px;
   font-weight: 400;
 }
+.nav-link {
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+}
+.nav-link:hover {
+  background-color: #0572e6;
+  color: #fff;
+  cursor: pointer;
+}
 h1 {
   font-family: 'Roboto', sans-serif;
   font-size: 20px;
@@ -144,6 +154,32 @@ footer {
   margin: 10px;
 }
 
+#inv-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  margin: 20px auto;
+  font-weight: 400;
+  line-height: 1.6;
+  text-align: center;
+  list-style: none;
+}
+#inv-display li {
+  margin: 10px 0;
+}
+#inv-display li a {
+  text-decoration: none;
+  color: #0572e6;
+  font-weight: 600;
+}
+#inv-display li a:hover {
+  color: #000;
+  cursor: pointer;
+}
+
+
 @media screen and (min-width: 600px) {
   body {
     background: url("/images/site/checkerboard.jpg");
@@ -214,5 +250,17 @@ footer {
   }
   footer {
     margin: 40px 0 0 0;
+  }
+  #inv-display {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 1fr 1fr;
+    gap: 8px 8px;
+    grid-template-areas: 
+      "h2 h2"
+      "inv1 inv2"
+      "inv3 inv4";
+    align-items: center;
+    justify-items: center;
   }
 }
