@@ -1,0 +1,19 @@
+<%# The content Heading %>
+<% if (title) { %>
+    <h1 style="text-align: center;"><%= title %></h1>
+<% } else { %>
+    res.redirect('/')
+<% } %>
+
+<%# messages() %>
+<% if (message) { %>
+        <p style="text-align: center;"><strong>Error:</strong> <%= message %></p>
+        <div class="error-container">
+            <img src="/images/site/sorrow.png" alt="Sorrow Image">
+            <div class="error-text">
+                <h1>Awww... DON'T CRY.</h1>
+                <p>It's just a 404 error!</p>
+                <p>What you're looking for may have been misplaced in Long Term memory.</p>
+            </div>
+        </div>
+<% } %>
