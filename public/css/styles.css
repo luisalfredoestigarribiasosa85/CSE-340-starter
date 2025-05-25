@@ -194,6 +194,23 @@ footer {
   font-size: 16px;
   margin: 20px;
 }
+.vehicle-detail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  text-align:justify;
+}
+.vehicle-detail img {
+  width: 80%;
+  height: auto;
+}
+.vehicle-detail ul {
+  list-style: none;
+  padding: 0;
+  margin: 20px;
+}
 
 
 @media screen and (min-width: 600px) {
@@ -294,5 +311,23 @@ footer {
   .error-text {
     font-size: 20px;
     margin: 20px;
+  }
+  .vehicle-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-weight: 400;
+    text-align: justify;
+  }
+  .vehicle-detail img {
+    width: 50%;
+    height: auto;
+  }
+  .vehicle-detail ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px;
+    font-size: 20px;
   }
 }

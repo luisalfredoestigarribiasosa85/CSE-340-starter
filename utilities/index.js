@@ -59,6 +59,26 @@ Util.buildClassificationGrid = async function (data) {
 }
 
 /* ****************************************
+    * A custom function in the utilities > index.js file that will take the specific vehicle's information and wrap it up in HTML to deliver to the view
+    * **************************************** */
+Util.buildDetailView = async function (data) {
+    let view = ""
+    if (data.length > 0) {
+        view += '<div class="detail">'
+        view += '<h1>' + data[0].inv_make + ' ' + data[0].inv_model + '</h1>'
+        view += '<img src="' + data[0].inv_image + '" alt="Image of ' + data[0].inv_make + ' ' + data[0].inv_model + '" />'
+        view += '<p>Price: $' + new Intl.NumberFormat('en-US').format(data[0].inv_price) + '</p>'
+        view += '<p>Color: ' + data[0].inv_color + '</p>'
+        view += '<p>Mileage: ' + new Intl.NumberFormat('en-US').format(data[0].inv_mileage) + ' miles</p>'
+        view += '<p>Description: ' + data[0].inv_description + '</p>'
+        view += '</div>'
+    } else {
+        view = '<p class="notice">Sorry, no matching vehicle could be found.</p>'
+    }
+    return view
+}
+
+/* ****************************************
  * Middleware For Handling Errors
  * Wrap other function in this for 
  * General Error Handling
